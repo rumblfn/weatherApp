@@ -1,0 +1,8 @@
+html[data-theme='light'] {
+    --app-color: #cfcfe6;
+    --button-color: #2b2b94;
+}
+
+html[data-theme='dark'] {
+    
+}
