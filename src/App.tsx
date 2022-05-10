@@ -1,38 +1,41 @@
 import Input from "./components/cityInput/index";
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { setCity } from "./store/reducer/actions";
 
 function App() {
-  const [city, setCity] = useState<string>("");
+  const city: string = useSelector((state: any) => state.reducer.city);
   const [error, setError] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position: GeolocationPosition) => getCityByCoords(position.coords.latitude, position.coords.longitude)
+        (position: GeolocationPosition) => getCityByCoords(position)
       );
     } else {
       setError("error");
     }
   }, []);
 
-  async function getCityByCoords(latitude: number, longitude: number) {
+  async function getCityByCoords(position: GeolocationPosition) {
+    const lat: number = position.coords.latitude
+    const lg: number = position.coords.longitude
     try {
       const response = await axios.get(
-        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lg}&localityLanguage=en`
       );
-      setCity(response.data.city);
+      dispatch(setCity(response.data.city));
     } catch (e) {
       console.log(e);
     }
   }
 
-  useEffect(() => {console.log(city)}, [city])
-
   return (
     <div className="App container">
       <Input />
-      
+
     </div>
   );
 }
