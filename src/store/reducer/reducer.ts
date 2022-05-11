@@ -1,7 +1,8 @@
-import { SET_CITY } from "./actions"
+import { SET_CITY, SET_CITY_DATA } from "./actions"
 
 const initialState = {
-    city: ""
+    city: "",
+    data: {}
 }
 
 export const Reducer = (state = initialState, action: any) => {
@@ -10,6 +11,12 @@ export const Reducer = (state = initialState, action: any) => {
             return {
                 ...state,
                 city: action.payload
+            }
+        }
+        case SET_CITY_DATA: {
+            return {
+                ...state,
+                data: {...action.payload}
             }
         }
         default: {

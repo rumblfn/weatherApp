@@ -1,41 +1,34 @@
 import Input from "./components/cityInput/index";
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { setCity } from "./store/reducer/actions";
+import { WeatherInfo } from "./components/WeatherInfo";
+import { getCityByCoords } from "./helpers/getCityByCoords";
 
 function App() {
   const city: string = useSelector((state: any) => state.reducer.city);
+  const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState("");
   const dispatch = useDispatch();
+
+  const callbackSetCity = (city: string) => {
+    dispatch(setCity(city))
+  }
 
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position: GeolocationPosition) => getCityByCoords(position)
+        (position: GeolocationPosition) => getCityByCoords(position, callbackSetCity)
       );
     } else {
       setError("error");
     }
   }, []);
 
-  async function getCityByCoords(position: GeolocationPosition) {
-    const lat: number = position.coords.latitude
-    const lg: number = position.coords.longitude
-    try {
-      const response = await axios.get(
-        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lg}&localityLanguage=en`
-      );
-      dispatch(setCity(response.data.city));
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
   return (
     <div className="App container">
-      <Input />
-
+      <Input loading={loading} setLoading={setLoading} />
+      <WeatherInfo city={city} />
     </div>
   );
 }
