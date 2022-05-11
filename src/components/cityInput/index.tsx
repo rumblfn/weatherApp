@@ -3,11 +3,10 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
-import axios from "axios";
-import { IWeather } from "../../types/types";
 import { useDispatch } from "react-redux";
 import { setCityData, setCity } from "../../store/reducer/actions";
 import { IWeatherData } from "../../types/types"
+import { fetchWeatherByCity } from "../../helpers/fetchWeatherByCity"
 
 interface InputProps {
   loading: boolean;
@@ -20,28 +19,23 @@ const Input: FC<InputProps> = ({ loading, setLoading }) => {
 
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (inputRef.current?.value) {
-      fetchWeatherByCity(inputRef.current?.value || "");
+      handleFetchingWeatherByCity(inputRef.current?.value || "");
     }
   };
 
   const onKeyPressed = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if ((e.key === "Enter" || e.keyCode === 13) && inputRef.current?.value) {
-      fetchWeatherByCity(inputRef.current?.value || "");
+      handleFetchingWeatherByCity(inputRef.current?.value || "");
     }
   };
 
-  async function fetchWeatherByCity(city: string) {
-    setLoading(true);
+  async function handleFetchingWeatherByCity(city: string) {
     try {
-      const response: IWeather = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=f40fa20386b64691829182655221005&q=${city}&aqi=no`
-      );
-      const data: IWeatherData = response.data;
+      const data: IWeatherData = await fetchWeatherByCity(city)
       dispatch(setCity(data.location.name));
       dispatch(setCityData(data));
       setLoading(false);
-    } catch (e) {
-      alert(e);
+    } catch {
       setLoading(false);
     }
   }
