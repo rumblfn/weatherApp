@@ -1,0 +1,141 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2022-05-11 19:10:31
+count workspace : /Users/samilvaliahmetov/education/programming/local-github/weathe-app
+total files : 118
+total code lines : 29645
+total comment lines : 10
+total blank lines : 72
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |            .ts|             70|              3|              9|   0.24|
+   |           .tsx|            422|              0|             26|    1.4|
+   |           .css|             27|              0|              5|  0.091|
+   |          .json|          29064|              0|              7|     98|
+   |            .md|             27|              6|             20|  0.091|
+   |          .html|             17|              0|              0|  0.057|
+   |               |             18|              1|              5|  0.061|
+   -------------------------------------------------------------------------
+.gitignore, code is 18, comment is 1, blank is 5.
+package-lock.json, code is 28985, comment is 0, blank is 2.
+package.json, code is 55, comment is 0, blank is 3.
+public/img/weather/64x64/day/113.png, it is a binary file.
+public/img/weather/64x64/day/116.png, it is a binary file.
+public/img/weather/64x64/day/119.png, it is a binary file.
+public/img/weather/64x64/day/122.png, it is a binary file.
+public/img/weather/64x64/day/143.png, it is a binary file.
+public/img/weather/64x64/day/176.png, it is a binary file.
+public/img/weather/64x64/day/179.png, it is a binary file.
+public/img/weather/64x64/day/182.png, it is a binary file.
+public/img/weather/64x64/day/185.png, it is a binary file.
+public/img/weather/64x64/day/200.png, it is a binary file.
+public/img/weather/64x64/day/227.png, it is a binary file.
+public/img/weather/64x64/day/230.png, it is a binary file.
+public/img/weather/64x64/day/248.png, it is a binary file.
+public/img/weather/64x64/day/260.png, it is a binary file.
+public/img/weather/64x64/day/263.png, it is a binary file.
+public/img/weather/64x64/day/266.png, it is a binary file.
+public/img/weather/64x64/day/281.png, it is a binary file.
+public/img/weather/64x64/day/284.png, it is a binary file.
+public/img/weather/64x64/day/293.png, it is a binary file.
+public/img/weather/64x64/day/296.png, it is a binary file.
+public/img/weather/64x64/day/299.png, it is a binary file.
+public/img/weather/64x64/day/302.png, it is a binary file.
+public/img/weather/64x64/day/305.png, it is a binary file.
+public/img/weather/64x64/day/308.png, it is a binary file.
+public/img/weather/64x64/day/311.png, it is a binary file.
+public/img/weather/64x64/day/314.png, it is a binary file.
+public/img/weather/64x64/day/317.png, it is a binary file.
+public/img/weather/64x64/day/320.png, it is a binary file.
+public/img/weather/64x64/day/323.png, it is a binary file.
+public/img/weather/64x64/day/326.png, it is a binary file.
+public/img/weather/64x64/day/329.png, it is a binary file.
+public/img/weather/64x64/day/332.png, it is a binary file.
+public/img/weather/64x64/day/335.png, it is a binary file.
+public/img/weather/64x64/day/338.png, it is a binary file.
+public/img/weather/64x64/day/350.png, it is a binary file.
+public/img/weather/64x64/day/353.png, it is a binary file.
+public/img/weather/64x64/day/356.png, it is a binary file.
+public/img/weather/64x64/day/359.png, it is a binary file.
+public/img/weather/64x64/day/362.png, it is a binary file.
+public/img/weather/64x64/day/365.png, it is a binary file.
+public/img/weather/64x64/day/368.png, it is a binary file.
+public/img/weather/64x64/day/371.png, it is a binary file.
+public/img/weather/64x64/day/374.png, it is a binary file.
+public/img/weather/64x64/day/377.png, it is a binary file.
+public/img/weather/64x64/day/386.png, it is a binary file.
+public/img/weather/64x64/day/389.png, it is a binary file.
+public/img/weather/64x64/day/392.png, it is a binary file.
+public/img/weather/64x64/day/395.png, it is a binary file.
+public/img/weather/64x64/night/113.png, it is a binary file.
+public/img/weather/64x64/night/116.png, it is a binary file.
+public/img/weather/64x64/night/119.png, it is a binary file.
+public/img/weather/64x64/night/122.png, it is a binary file.
+public/img/weather/64x64/night/143.png, it is a binary file.
+public/img/weather/64x64/night/176.png, it is a binary file.
+public/img/weather/64x64/night/179.png, it is a binary file.
+public/img/weather/64x64/night/182.png, it is a binary file.
+public/img/weather/64x64/night/185.png, it is a binary file.
+public/img/weather/64x64/night/200.png, it is a binary file.
+public/img/weather/64x64/night/227.png, it is a binary file.
+public/img/weather/64x64/night/230.png, it is a binary file.
+public/img/weather/64x64/night/248.png, it is a binary file.
+public/img/weather/64x64/night/260.png, it is a binary file.
+public/img/weather/64x64/night/263.png, it is a binary file.
+public/img/weather/64x64/night/266.png, it is a binary file.
+public/img/weather/64x64/night/281.png, it is a binary file.
+public/img/weather/64x64/night/284.png, it is a binary file.
+public/img/weather/64x64/night/293.png, it is a binary file.
+public/img/weather/64x64/night/296.png, it is a binary file.
+public/img/weather/64x64/night/299.png, it is a binary file.
+public/img/weather/64x64/night/302.png, it is a binary file.
+public/img/weather/64x64/night/305.png, it is a binary file.
+public/img/weather/64x64/night/308.png, it is a binary file.
+public/img/weather/64x64/night/311.png, it is a binary file.
+public/img/weather/64x64/night/314.png, it is a binary file.
+public/img/weather/64x64/night/317.png, it is a binary file.
+public/img/weather/64x64/night/320.png, it is a binary file.
+public/img/weather/64x64/night/323.png, it is a binary file.
+public/img/weather/64x64/night/326.png, it is a binary file.
+public/img/weather/64x64/night/329.png, it is a binary file.
+public/img/weather/64x64/night/332.png, it is a binary file.
+public/img/weather/64x64/night/335.png, it is a binary file.
+public/img/weather/64x64/night/338.png, it is a binary file.
+public/img/weather/64x64/night/350.png, it is a binary file.
+public/img/weather/64x64/night/353.png, it is a binary file.
+public/img/weather/64x64/night/356.png, it is a binary file.
+public/img/weather/64x64/night/359.png, it is a binary file.
+public/img/weather/64x64/night/362.png, it is a binary file.
+public/img/weather/64x64/night/365.png, it is a binary file.
+public/img/weather/64x64/night/368.png, it is a binary file.
+public/img/weather/64x64/night/371.png, it is a binary file.
+public/img/weather/64x64/night/374.png, it is a binary file.
+public/img/weather/64x64/night/377.png, it is a binary file.
+public/img/weather/64x64/night/386.png, it is a binary file.
+public/img/weather/64x64/night/389.png, it is a binary file.
+public/img/weather/64x64/night/392.png, it is a binary file.
+public/img/weather/64x64/night/395.png, it is a binary file.
+public/index.html, code is 17, comment is 0, blank is 0.
+README.md, code is 26, comment is 6, blank is 20.
+README.old.md, code is 1, comment is 0, blank is 0.
+src/App.tsx, code is 46, comment is 0, blank is 7.
+src/colors.css, code is 7, comment is 0, blank is 2.
+src/components/cityInput/index.tsx, code is 73, comment is 0, blank is 7.
+src/components/WeatherInfo/index.tsx, code is 216, comment is 0, blank is 5.
+src/components/WeatherTimeSelect/index.css, code is 5, comment is 0, blank is 0.
+src/components/WeatherTimeSelect/index.tsx, code is 17, comment is 0, blank is 1.
+src/helpers/fetchWeatherByCity.ts, code is 8, comment is 1, blank is 1.
+src/helpers/getCityByCoords.ts, code is 16, comment is 1, blank is 1.
+src/index.css, code is 15, comment is 0, blank is 3.
+src/index.tsx, code is 18, comment is 0, blank is 2.
+src/react-app-env.d.ts, code is 0, comment is 1, blank is 0.
+src/store/index.ts, code is 11, comment is 0, blank is 2.
+src/store/reducer/actions.ts, code is 11, comment is 0, blank is 3.
+src/store/reducer/reducer.ts, code is 24, comment is 0, blank is 2.
+src/types/types.tsx, code is 52, comment is 0, blank is 4.
+tsconfig.json, code is 24, comment is 0, blank is 2.
+===============================================================================

@@ -7,8 +7,6 @@ import { getCityByCoords } from "./helpers/getCityByCoords";
 import { fetchWeatherByCity } from "./helpers/fetchWeatherByCity";
 import { IWeatherData } from "./types/types";
 
-export const images = require.context("../public/img/weather/64x64", true);
-
 function App() {
   const city: string = useSelector((state: any) => state.reducer.city);
   const [loading, setLoading] = useState<boolean>(false);
